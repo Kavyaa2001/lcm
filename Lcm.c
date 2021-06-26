@@ -1,30 +1,27 @@
-include<stdio.h>
-int lcm(int a,int b);
-int a,b,i,x,y;
+#include<stdio.h>
+int _lcm(int, int);  
 int main()
 {
-    int x=12,y=30;
-    printf("Input");
-    printf("\nInput first number:%d",x);
-    printf("\nInput second number:%d",y);
-    int l=lcm(x,y);
-    printf("\n\nOutput");
-    printf("\nLCM  of %d and %d=%d",x,y,l);
+    int a=12, b=30, lcm;
+    lcm = _lcm(a,b);
+    printf("Input\n");
+    printf("Input first number:%d \n",a);
+    printf("Input second number:%d\n",b);
+    printf("Output\n");
+    printf("LCM of %d and %d is: %d", a, b, lcm);
     return 0;
 }
-
-int lcm(int a,int b)
+int _lcm(int a, int b)  
 {
-    static int i=2;
-    if(i%a==0 && i%b==0)
+    static int temp = 1;    
+    if(temp%a == 0 && temp%b == 0)
     {
-        return i;
+        return temp;
     }
     else
     {
-        i++;
-        lcm(a,b);
-        return i;
+        temp++;
+        _lcm(a,b);
+        return temp;
     }
-        
 }
