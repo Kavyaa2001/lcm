@@ -2,9 +2,7 @@
 int _lcm(int, int);  
 int main()
 {
-    int a, b, lcm;
-    printf("Enter 2 numbers to find LCM : \n");
-    scanf("%d%d", &a, &b);
+    int a=12, b=30, lcm;
     lcm = _lcm(a,b);   
     printf("LCM of %d and %d is: %d", a, b, lcm);
     return 0;
