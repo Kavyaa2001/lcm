@@ -6,8 +6,8 @@ int main()
     lcm = _lcm(a,b);
     printf("Input\n");
     printf("Input first number:%d \n",a);
-    printf("Input second number:%d\n",b);
-    printf("Output\n");
+    printf("Input second number:%d\n\n",b);
+    printf("\nOutput\n");
     printf("LCM of %d and %d is: %d", a, b, lcm);
     return 0;
 }
